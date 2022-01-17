@@ -1,0 +1,104 @@
+<div class="modal-header">
+  <h4 class="modal-title pull-left">Ingreso de mercadería</h4>
+  <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+    <span aria-hidden="true" class="visually-hidden">&times;</span>
+  </button>
+</div>
+<div class="modal-body">
+  <form action="" class="form">
+    <div class="row m-b-1">
+      <div class="col-md-4">
+        <label for="">Cuentas con un código de pedido?</label>
+        <div>
+          <input type="radio" name="checkCode" id="" value="true" (click)="checkOrderCode($event)"> Si
+          <input type="radio" name="checkCode" id="" value="false" (click)="checkOrderCode($event)" class="m-l-1"> No
+        </div>
+        <div class="flex-row m-t-1" [hidden]="!hasOrderCode">
+          <input type="text" name="" id="" class="form-control m-r-1" placeholder="Ingresar código de pedido ejem: 'ABCC-0002' ">
+          <button class="btn btn-primary">Buscar</button>
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+
+    <div class="row m-b-1" >
+      <!-- <div class="col-md-12"></div> -->
+      <div class="col-md-12">
+        <div class="buttons">
+          <a href="javascript:void(0)" class="button-item" (click)="addItem()"> <i class="bi bi-plus-lg"></i> </a>
+        </div>
+        <table class="table table-hover">
+          <thead>
+            <th>Item</th>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Cantidad</th>
+            <th>Cantidad Real</th>
+            <th>Unidad de Medida</th>
+            <th>Precio</th>
+            <th>SubTotal</th>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>[PROD001] Zapato 40bw</td>
+              <td>Zapato casual para moda</td>
+              <td>4</td>
+              <td><input type="text" name="" id="" class="form-control" value="4"></td>
+              <td>Unidad</td>
+              <td>100 </td>
+              <td>400 </td>
+            </tr>
+
+            <tr>
+              <td>2</td>
+              <td>[PROD001] Camisa Top</td>
+              <td>Camisa de vestir elegante</td>
+              <td>1</td>
+              <td><input type="text" name="" id="" class="form-control" value="1"></td>
+              <td>Unidad</td>
+              <td>300 </td>
+              <td>300 </td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td><input type="text" name="" id="" class="form-control"></td>
+              <td><input type="text" name="" id="" class="form-control"></td>
+              <td><input type="text" name="" id="" class="form-control"></td>
+              <td><input type="text" name="" id="" class="form-control" value=""></td>
+              <td>
+                <select name="" id="" class="form-control">
+                  <option value="MT">Metros</option>
+                  <option value="UNIDAD">Unidad</option>
+                </select>
+              </td>
+              <td><input type="text" name="" id="" class="form-control"> </td>
+              <td><input type="text" name="" id="" class="form-control"> </td>
+            </tr>
+
+          </tbody>
+
+          <tfoot>
+            <th colspan="5">&nbsp;</th>
+            <th>Total</th>
+            <th>700</th>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+
+
+  </form>
+  <!-- <ul *ngIf="list.length">
+    <li *ngFor="let item of list">{{item}}</li>
+  </ul> -->
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" (click)="onModalClose">Cerrar</button>
+</div>

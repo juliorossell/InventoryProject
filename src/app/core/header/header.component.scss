@@ -1,0 +1,32 @@
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: #2a2a2a;
+  font-weight: 600;
+}
+
+.toolbar img {
+  margin: 0 16px;
+}
+
+:host {
+  box-shadow: 0 2px 12px 0 #dfe3eb;
+  background: #ffffff;
+  color: #2a2a2a;
+}
+
+
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1040;
+
+}
+
